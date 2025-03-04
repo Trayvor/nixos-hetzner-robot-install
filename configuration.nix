@@ -21,11 +21,14 @@
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
+    pkgs.htop
+    pkgs.python314
+    pkgs.nano
   ];
 
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHQTEx8UCZ0vam07WZ4sDbP3hLU1SJTwJgna7WKOuYuE durashka@Durashka"
+    ""
   ];
 
   system.stateVersion = "24.05";
