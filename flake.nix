@@ -24,7 +24,7 @@
             services.vscode-server.enable = true;
           })
           disko.nixosModules.disko
-          ./disk-config
+          ./disk-config.nix
           ./configuration.nix
           ./hardware-configuration.nix
         ];
