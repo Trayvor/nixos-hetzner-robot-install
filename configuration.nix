@@ -8,6 +8,7 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
+    (fetchTarball "https://github.com/nix-community/nixos-vscode-server/tarball/master")
     ./disk-config.nix
   ];
   boot.loader.grub = {
@@ -17,6 +18,7 @@
     efiInstallAsRemovable = true;
   };
   services.openssh.enable = true;
+  services.vscode-server.enable = true;
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 
   services.nginx = {
